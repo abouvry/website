@@ -1,6 +1,6 @@
 import React from "react";
 
-function Project() {
+function Project({ title, description, link }) {
   return (
     <div className="border border-gray-800 rounded-2xl p-6 mb-6 hover:bg-[#112240] transition-colors">
       <h3 className="text-xl font-semibold text-white">{title}</h3>
