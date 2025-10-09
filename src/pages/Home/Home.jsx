@@ -43,7 +43,7 @@ function Home() {
         }}
       >
         <LiquidEther
-          colors={["#5227ff", "#ff9ffc", "#b19eef"]}
+          colors={["#6229ff", "#c09eff", "#a3a5f0"]}
           mouseForce={20}
           cursorSize={100}
           isViscous={false}
@@ -64,7 +64,7 @@ function Home() {
       <div className="relative z-20 flex flex-col md:flex-row min-h-screen pointer-events-auto">
         <aside className="lg:pl-30 md:fixed md:pt-25 pt-8 md:w-1/2 w-full md:h-screen flex flex-col p-6 items-center md:items-start text-center md:text-left">
           <header className="ml-[50px]">
-            <h1 className="text-5xl font-extrabold text-slate-200 mb-2 m-50px">
+            <h1 className="text-6xl font-extrabold text-slate-200 mb-2 m-50px">
               Alexis Bouvry
             </h1>
             <h2 className="md:text-2xl font-bold text-slate-200 mb-10 lg:mb-20">
@@ -75,7 +75,7 @@ function Home() {
                 <a
                   key={item.id}
                   href={`#${item.id}`}
-                  className="group flex items-center text-gray-400 hover:text-[#64ffda] transition-colors"
+                  className="group flex items-center text-slate-200 hover:text-[#64ffda] transition-colors"
                 >
                   <span className="inline-block mr-3 h-px w-4 bg-[#64ffda] transition-all duration-200 ease-in-out group-hover:w-16"></span>
                   {item.label}
@@ -85,14 +85,14 @@ function Home() {
           </header>
 
           {/* Socials */}
-          <div className="md:flex flex gap-6 ml-[50px] lg:mt-20">
+          <div className="md:flex flex gap-6 ml-[50px] md:mt-20 lg:mt-20">
             {socialLinks.map((link, idx) => (
               <a
                 key={idx}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#64ffda] transition-colors"
+                className="text-slate-200 hover:text-[#64ffda] transition-colors"
               >
                 {link.icon}
               </a>
@@ -103,7 +103,7 @@ function Home() {
         {/* Main content */}
         <main className="md:ml-[50%] flex-1 p-8 space-y-32 md:pt-25">
           <Section id="about" title="About Me">
-            <p className="mb-4">
+            <p className="mb-4 text-slate-200">
               Creative Front-End Developer with a focus on{" "}
               <span className="font-bold">React</span>,
               <span className="font-bold">TypeScript</span>, and{" "}
@@ -111,17 +111,17 @@ function Home() {
               Experienced in building responsive, accessible, and visually
               appealing interfaces through freelance projects.
             </p>
-            <p className="mb-4">
+            <p className="mb-4 text-slate-200">
               In the past, I have worked as a{" "}
               <span className="font-bold">Graphic Designer</span>, which has
               given me a strong foundation in visual communication and user
               experience.
             </p>
-            <p className="mb-4">
+            <p className="mb-4 text-slate-200">
               Combines technical expertise with my background in graphic design
               to deliver user-centered web experiences.
             </p>
-            <p>
+            <p className="text-slate-200">
               In my spare time, I enjoy working on side projects like developing
               bots and applications that integrate popular APIs. I’m also
               passionate about traveling, photo editing, and drawing.
