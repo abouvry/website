@@ -40,7 +40,6 @@ function Home() {
           width: "100vw",
           height: "100vh",
           zIndex: 0,
-          pointerEvents: "none",
         }}
       >
         <LiquidEther
@@ -62,8 +61,8 @@ function Home() {
         />
       </div>
       {/* Sidebar */}
-      <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
-        <aside className="lg:pl-30 md:fixed pt-8 md:w-1/2 w-full md:h-screen flex flex-col p-6">
+      <div className="relative z-20 flex flex-col md:flex-row min-h-screen pointer-events-auto">
+        <aside className="lg:pl-30 md:fixed md:pt-25 pt-8 md:w-1/2 w-full md:h-screen flex flex-col p-6 items-center md:items-start text-center md:text-left">
           <header className="ml-[50px]">
             <h1 className="text-5xl font-extrabold text-slate-200 mb-2 m-50px">
               Alexis Bouvry
@@ -102,26 +101,42 @@ function Home() {
         </aside>
 
         {/* Main content */}
-        <main className="md:ml-[50%] flex-1 p-8 space-y-32">
+        <main className="md:ml-[50%] flex-1 p-8 space-y-32 md:pt-25">
           <Section id="about" title="About Me">
+            <p className="mb-4">
+              Creative Front-End Developer with a focus on{" "}
+              <span className="font-bold">React</span>,
+              <span className="font-bold">TypeScript</span>, and{" "}
+              <span className="font-bold">modern UI/UX design</span>.
+              Experienced in building responsive, accessible, and visually
+              appealing interfaces through freelance projects.
+            </p>
+            <p className="mb-4">
+              In the past, I have worked as a{" "}
+              <span className="font-bold">Graphic Designer</span>, which has
+              given me a strong foundation in visual communication and user
+              experience.
+            </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum
+              Combines technical expertise with my background in graphic design
+              to deliver user-centered web experiences.
             </p>
           </Section>
 
-          <Section id="experience" title="Experiences" subtitle="View my full résumé">
+          <Section
+            id="experience"
+            title="Experiences"
+            subtitle={{
+              text: "View my full résumé",
+              url: "https://github.com/abouvry",
+            }}
+          >
             {experiences.map((exp, index) => (
               <div
                 key={index}
                 className="mb-10 flex flex-col md:flex-row md:items-start"
               >
-                <div className="md:w-1/7 md:text-left mb-2 pt-1 md:mb-0 flex-shrink-0">
+                <div className="md:w-1/6 md:text-left mb-2 pt-1 md:mb-0 flex-shrink-0">
                   <span className="text-[#64ffda] text-sm md:block">
                     {exp.date}
                   </span>
@@ -135,7 +150,7 @@ function Home() {
                     {exp.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-4 py-1 text-xs font-medium bg-[#0f2520] rounded-full text-[#64ffda]"
+                        className="px-4 py-1 text-xs font-medium bg-[#0f2520de] rounded-full text-[#64ffda]"
                       >
                         {tag}
                       </span>
@@ -146,7 +161,14 @@ function Home() {
             ))}
           </Section>
 
-          <Section id="work" title="Projects" subtitle="View more on my GitHub">
+          <Section
+            id="work"
+            title="Projects"
+            subtitle={{
+              text: "View more on my GitHub",
+              url: "https://github.com/abouvry",
+            }}
+          >
             {projects.map((project, index) => (
               <Project
                 key={index}
