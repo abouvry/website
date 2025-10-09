@@ -2,7 +2,7 @@ import React from "react";
 
 function Project({ title, description, link, image }) {
   return (
-    <div className="border border-gray-800 rounded-2xl p-6 mb-6 hover:bg-[#112240] transition-colors">
+    <div className="border border-gray-800 rounded-2xl p-6 mb-6 backdrop-blur-3xl hover:bg-[#11224031] transition-colors">
       {image && (
         <img
           src={image}
