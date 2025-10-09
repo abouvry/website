@@ -30,7 +30,7 @@ function Home() {
     };
   });
   return (
-    <div className="relative min-h-screen text-gray-200 bg-[#060010] font-sans">
+    <div className="relative min-h-screen text-gray-200 bg-[#060010]">
       <div
         style={{
           position: "fixed",
@@ -64,20 +64,12 @@ function Home() {
       <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
         <aside className="lg:pl-20 md:fixed pt-8 md:w-1/2 w-full md:h-screen flex flex-col p-6">
           <header className="ml-[50px]">
-            <motion.h1
-              className="text-5xl font-bold text-[#64ffda] mb-2 m-50px"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
+            <h1 className="text-5xl font-extrabold text-slate-200 mb-2 m-50px">
               Alexis Bouvry
-            </motion.h1>
-            <motion.h2
-              className="md:text-3xl font-bold text-[#ffffff] mb-10 lg:mb-20"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
+            </h1>
+            <h2 className="md:text-2xl font-bold text-slate-200 mb-10 lg:mb-20">
               Front End Developer
-            </motion.h2>
+            </h2>
             <nav className="hidden md:flex flex-col gap-6">
               {navItems.map((item) => (
                 <a
@@ -124,26 +116,36 @@ function Home() {
 
           <Section id="experience" title="Experience">
             {Data.experiences.map((exp, index) => (
-              <div key={index} className="mb-6">
-                <h3 className="text-xl font-bold text-[#ffffff]">
-                  <strong>{exp.title}</strong> — {exp.company} {exp.date}
-                </h3>
-                <p className="mt-2 text-gray-300">{exp.description}</p>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {exp.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 text-xs bg-gray-700 rounded-md text-[#64ffda]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+              <div
+                key={index}
+                className="mb-10 flex flex-col md:flex-row md:items-start"
+              >
+                <div className="md:w-1/7 md:text-left mb-2 pt-1 md:mb-0 flex-shrink-0">
+                  <span className="text-[#64ffda] text-sm md:block">
+                    {exp.date}
+                  </span>
+                </div>
+                <div className="md:w-5/6">
+                  <h3 className="text-xl font-bold text-[#ffffff]">
+                    <strong>{exp.title}</strong> — {exp.company}
+                  </h3>
+                  <p className="mt-2 text-gray-400">{exp.description}</p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {exp.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-4 py-1 text-xs font-medium bg-[#0f2520] rounded-full text-[#64ffda]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
           </Section>
 
-          <Section id="work" title="Featured Projects">
+          <Section id="work" title="Projects">
             {Data.projects.map((project, index) => (
               <Project
                 key={index}
