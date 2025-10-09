@@ -63,7 +63,7 @@ function Home() {
       </div>
       {/* Sidebar */}
       <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
-        <aside className="lg:pl-20 md:fixed pt-8 md:w-1/2 w-full md:h-screen flex flex-col p-6">
+        <aside className="lg:pl-30 md:fixed pt-8 md:w-1/2 w-full md:h-screen flex flex-col p-6">
           <header className="ml-[50px]">
             <h1 className="text-5xl font-extrabold text-slate-200 mb-2 m-50px">
               Alexis Bouvry
@@ -115,7 +115,7 @@ function Home() {
             </p>
           </Section>
 
-          <Section id="experience" title="Experience">
+          <Section id="experience" title="Experiences" subtitle="View my full résumé">
             {experiences.map((exp, index) => (
               <div
                 key={index}
@@ -130,8 +130,8 @@ function Home() {
                   <h3 className="text-xl text-[#ffffff]">
                     <strong>{exp.title}</strong> — {exp.company}
                   </h3>
-                  <p className="mt-2 text-gray-400">{exp.description}</p>
-                  <div className="mt-2 flex flex-wrap gap-2">
+                  <p className="mt-3 text-gray-400">{exp.description}</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
                     {exp.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
@@ -146,7 +146,7 @@ function Home() {
             ))}
           </Section>
 
-          <Section id="work" title="Projects">
+          <Section id="work" title="Projects" subtitle="View more on my GitHub">
             {projects.map((project, index) => (
               <Project
                 key={index}
@@ -158,16 +158,11 @@ function Home() {
             ))}
           </Section>
 
-          <Section id="contact" title="Contact">
+          <Section id="contact">
             <p>
-              Intéressé par une collaboration ? Écris-moi à{" "}
-              <a
-                href="mailto:bouvryalexis@email.com"
-                className="text-[#64ffda] hover:underline"
-              >
-                bouvryalexis@email.com
-              </a>
-              .
+              Built with <span className="text-[#64ffda]">React</span>,
+              <span className="text-[#64ffda]">TailwindCSS</span> and
+              <span className="text-[#64ffda]"> ThreeJS</span>
             </p>
           </Section>
         </main>

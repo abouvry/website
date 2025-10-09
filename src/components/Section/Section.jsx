@@ -1,7 +1,7 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
-function Section({ id, title, children }) {
+function Section({ id, title, subtitle, children }) {
   return (
     <motion.section
       id={id}
@@ -13,8 +13,11 @@ function Section({ id, title, children }) {
     >
       <h2 className="text-2xl font-bold text-[#64ffda] mb-4">{title}</h2>
       <div className="text-gray-400 leading-relaxed">{children}</div>
+      <div className="my-8">
+        <a className="font-bold">{subtitle}</a>
+      </div>
     </motion.section>
-  )
+  );
 }
 
-export default Section
+export default Section;
