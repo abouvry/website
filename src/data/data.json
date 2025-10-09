@@ -1,0 +1,86 @@
+{
+  "navItems": [
+    {
+      "id": "about",
+      "label": "About"
+    },
+    {
+      "id": "experience",
+      "label": "Experience"
+    },
+    {
+      "id": "work",
+      "label": "Work"
+    },
+    {
+      "id": "contact",
+      "label": "Contact"
+    }
+  ],
+  "socialLinks": [
+    {
+      "platform": "Github",
+      "url": "https://github.com/abouvry",
+      "icon": "Github"
+    },
+    {
+      "platform": "Linkedin",
+      "url": "https://linkedin.com/in/profile",
+      "icon": "Linkedin"
+    },
+    {
+      "platform": "Email",
+      "url": "bouvryalexis@email.com",
+      "icon": "Mail"
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Frontend Developer",
+      "date": "2023–2025",
+      "company": "Exemple Corp",
+      "description": "Développement d’interfaces réactives, intégration d’API, et amélioration des performances du site.",
+      "tags": ["React", "JavaScript", "API", "Performance"]
+    },
+    {
+      "title": "Web Developer",
+      "date": "2022–2023",
+      "company": "Tech Solutions",
+      "description": "Création et maintenance de sites web dynamiques avec React et Node.js.",
+      "tags": ["React", "Node.js", "JavaScript", "HTML", "CSS"]
+    },
+    {
+      "title": "UI/UX Designer",
+      "date": "2021–2022",
+      "company": "Creative Agency",
+      "description": "Design d'interfaces utilisateur et expérience utilisateur pour des applications web et mobiles.",
+      "tags": ["UI Design", "UX Design", "Figma", "Prototyping"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Portfolio React",
+      "description": "Un site personnel",
+      "link": "#",
+      "image": "/src/assets/portfolio-preview.png"
+    },
+    {
+      "title": "Dashboard Analytics",
+      "description": "Visualisation de données avec Recharts et Next.js.",
+      "link": "#",
+      "image": "/src/assets/dashboard-preview.png"
+    },
+    {
+      "title": "E-commerce App",
+      "description": "Application e-commerce complète avec React et Node.js.",
+      "link": "#",
+      "image": "/src/assets/ecommerce-preview.png"
+    },
+    {
+      "title": "Task Management System",
+      "description": "Système de gestion de tâches avec drag and drop.",
+      "link": "#",
+      "image": "/src/assets/task-manager-preview.png"
+    }
+  ]
+}
