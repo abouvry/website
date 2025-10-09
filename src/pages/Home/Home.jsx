@@ -117,9 +117,14 @@ function Home() {
               given me a strong foundation in visual communication and user
               experience.
             </p>
-            <p>
+            <p className="mb-4">
               Combines technical expertise with my background in graphic design
               to deliver user-centered web experiences.
+            </p>
+            <p>
+              In my spare time, I enjoy working on side projects like developing
+              bots and applications that integrate popular APIs. I’m also
+              passionate about traveling, photo editing, and drawing.
             </p>
           </Section>
 
@@ -176,6 +181,7 @@ function Home() {
                 description={project.description}
                 link={project.link}
                 image={project.image}
+                tags={project.tags}
               />
             ))}
           </Section>
