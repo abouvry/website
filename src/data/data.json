@@ -5,12 +5,12 @@
       "label": "About"
     },
     {
-      "id": "experience",
-      "label": "Experience"
+      "id": "experiences",
+      "label": "Experiences"
     },
     {
-      "id": "work",
-      "label": "Work"
+      "id": "projects",
+      "label": "Projects"
     },
     {
       "id": "contact",
@@ -25,7 +25,7 @@
     },
     {
       "platform": "Linkedin",
-      "url": "https://linkedin.com/in/profile",
+      "url": "https://linkedin.com/in/alexis-bouvry-967a0a6b",
       "icon": "Linkedin"
     },
     {
@@ -37,50 +37,61 @@
   "experiences": [
     {
       "title": "Frontend Developer",
-      "date": "2023–2025",
-      "company": "Exemple Corp",
-      "description": "Développement d’interfaces réactives, intégration d’API, et amélioration des performances du site.",
-      "tags": ["React", "JavaScript", "API", "Performance"]
+      "date": "2023 – Present",
+      "company": "Freelance",
+      "description": "Designed and developed responsive user interfaces using React. Created custom graphics and interactive prototypes to improve user engagement. Delivered projects aligned with client brand identity and UX best practices.",
+      "tags": ["React", "Redux", "API", "Express", "Jest", "Figma"]
     },
     {
-      "title": "Web Developer",
-      "date": "2022–2023",
-      "company": "Tech Solutions",
-      "description": "Création et maintenance de sites web dynamiques avec React et Node.js.",
-      "tags": ["React", "Node.js", "JavaScript", "HTML", "CSS"]
+      "title": "Frontend Developer",
+      "date": "2021 – 2022",
+      "company": "Fafco",
+      "description": "Developed and maintained the company’s main WordPress website and a standalone HTML5/CSS3/Javascript landing page. Improved website performance and accessibility across devices.",
+      "tags": ["Wordpress", "Elementor", "JavaScript", "HTML", "CSS", "Materialize"]
     },
     {
-      "title": "UI/UX Designer",
-      "date": "2021–2022",
-      "company": "Creative Agency",
-      "description": "Design d'interfaces utilisateur et expérience utilisateur pour des applications web et mobiles.",
-      "tags": ["UI Design", "UX Design", "Figma", "Prototyping"]
+      "title": "Junior IT",
+      "date": "2017 – 2020",
+      "company": "Kramer Levin Naftalis & Frankell LLP",
+      "description": "Managed IT equipment, user support, and system maintenance. Created visual assets for internal and marketing communications.",
+      "tags": ["Figma", "Photoshop", "Illustrator", "Prototyping"]
+    },
+    {
+      "title": "Frontend Developer",
+      "date": "2016 – 2016",
+      "company": "Samifi",
+      "description": "Designed and implemented a documentation platform in HTML/CSS/PHP. Created visuals and graphic content for trade show materials.",
+      "tags": ["HTML", "CSS", "PHP"]
     }
   ],
   "projects": [
     {
-      "title": "Portfolio React",
-      "description": "Un site personnel",
+      "title": "alexisbouvry.com",
+      "description": "Personal portfolio site built with React, Tailwind CSS, Vite and ThreeJS.",
       "link": "#",
-      "image": "/src/assets/portfolio-preview.png"
+      "image": "/src/assets/portfolio-preview.png",
+      "tags": ["React", "TailwindCSS", "ThreeJS"]
     },
     {
-      "title": "Dashboard Analytics",
-      "description": "Visualisation de données avec Recharts et Next.js.",
+      "title": "TaskMananager",
+      "description": "Local task manager app created with React and React Redux",
       "link": "#",
-      "image": "/src/assets/dashboard-preview.png"
+      "image": "/src/assets/dashboard-preview.png",
+      "tags": ["React", "Redux", "React-dnd", "SCSS"]
     },
     {
-      "title": "E-commerce App",
-      "description": "Application e-commerce complète avec React et Node.js.",
-      "link": "#",
-      "image": "/src/assets/ecommerce-preview.png"
+      "title": "Kasa",
+      "description": "A responsive web app for real estate rentals built with React, showcasing properties with dynamic routing and styled components. Build with Vite and React.",
+      "link": "https://abouvry.github.io/Kasa/",
+      "image": "/src/assets/img/kasa.jpg",
+      "tags": ["React", "JavaScript", "SCSS", "Vite"]
     },
     {
-      "title": "Task Management System",
-      "description": "Système de gestion de tâches avec drag and drop.",
-      "link": "#",
-      "image": "/src/assets/task-manager-preview.png"
+      "title": "Sportsee",
+      "description": "Web app for tracking physical activity and visualizing sports performance data. Built with React and Recharts.",
+      "link": "https://abouvry.github.io/Sportsee/",
+      "image": "/src/assets/img/sportsee.png",
+      "tags": ["React", "Recharts", "JavaScript", "API"]
     }
   ]
 }
