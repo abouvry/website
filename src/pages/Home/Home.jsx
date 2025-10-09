@@ -8,8 +8,9 @@ import Data from "../../data/data.json";
 
 function Home() {
   const navItems = Data.navItems;
+  const experiences = Data.experiences;
+  const projects = Data.projects;
   const socialLinks = Data.socialLinks.map((link) => {
-    // Map the social links to the required format with icons
     let icon;
     switch (link.icon) {
       case "Github":
@@ -85,7 +86,7 @@ function Home() {
           </header>
 
           {/* Socials */}
-          <div className="md:flex flex gap-4 ml-[50px] lg:mt-20">
+          <div className="md:flex flex gap-6 ml-[50px] lg:mt-20">
             {socialLinks.map((link, idx) => (
               <a
                 key={idx}
@@ -115,7 +116,7 @@ function Home() {
           </Section>
 
           <Section id="experience" title="Experience">
-            {Data.experiences.map((exp, index) => (
+            {experiences.map((exp, index) => (
               <div
                 key={index}
                 className="mb-10 flex flex-col md:flex-row md:items-start"
@@ -126,7 +127,7 @@ function Home() {
                   </span>
                 </div>
                 <div className="md:w-5/6">
-                  <h3 className="text-xl font-bold text-[#ffffff]">
+                  <h3 className="text-xl text-[#ffffff]">
                     <strong>{exp.title}</strong> — {exp.company}
                   </h3>
                   <p className="mt-2 text-gray-400">{exp.description}</p>
@@ -146,7 +147,7 @@ function Home() {
           </Section>
 
           <Section id="work" title="Projects">
-            {Data.projects.map((project, index) => (
+            {projects.map((project, index) => (
               <Project
                 key={index}
                 title={project.title}
