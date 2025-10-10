@@ -11,10 +11,6 @@
     {
       "id": "projects",
       "label": "Projects"
-    },
-    {
-      "id": "contact",
-      "label": "Contact"
     }
   ],
   "socialLinks": [
@@ -83,14 +79,14 @@
       "title": "Kasa",
       "description": "A responsive web app for real estate rentals built with React, showcasing properties with dynamic routing and styled components. Build with Vite and React.",
       "link": "https://abouvry.github.io/Kasa/",
-      "image": "/src/assets/img/kasa.jpg",
+      "image": "img/kasa.jpg",
       "tags": ["React", "JavaScript", "SCSS", "Vite"]
     },
     {
       "title": "Sportsee",
       "description": "Web app for tracking physical activity and visualizing sports performance data. Built with React and Recharts.",
       "link": "https://abouvry.github.io/Sportsee/",
-      "image": "/src/assets/img/sportsee.png",
+      "image": "img/sportsee.png",
       "tags": ["React", "Recharts", "JavaScript", "API"]
     }
   ]
