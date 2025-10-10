@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
 import LiquidEther from "../../components/LiquidEther/LiquidEther";
@@ -10,6 +10,7 @@ function Home() {
   const navItems = Data.navItems;
   const experiences = Data.experiences;
   const projects = Data.projects;
+  const [activeSection, setActiveSection] = useState("");
   const socialLinks = Data.socialLinks.map((link) => {
     let icon;
     switch (link.icon) {
@@ -30,6 +31,43 @@ function Home() {
       url: link.url,
     };
   });
+
+  // Function to handle scroll and update active section
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => document.getElementById(item.id));
+      const scrollPosition = window.scrollY + 100; // Add offset to account for header
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(section.id);
+          break;
+        }
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial call to set active section
+    handleScroll();
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [navItems]);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 80, // Adjust for any fixed header
+        behavior: 'smooth'
+      });
+    }
+  };
   return (
     <div className="relative min-h-screen text-gray-200 bg-[#060010]">
       <div
@@ -75,9 +113,21 @@ function Home() {
                 <a
                   key={item.id}
                   href={`#${item.id}`}
-                  className="group flex items-center text-slate-200 hover:text-[#64ffda] transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.id);
+                  }}
+                  className={`group flex items-center uppercase font-bold tracking-wide text-sm transition-colors ${
+                    activeSection === item.id
+                      ? 'text-[#64ffda]'
+                      : 'text-slate-200 hover:text-[#64ffda]'
+                  }`}
                 >
-                  <span className="inline-block mr-3 h-px w-4 bg-[#64ffda] transition-all duration-200 ease-in-out group-hover:w-16"></span>
+                  <span className={`inline-block mr-3 h-px transition-all duration-200 ease-in-out ${
+                    activeSection === item.id
+                      ? 'w-16 bg-[#64ffda]'
+                      : 'w-4 bg-[#64ffda] group-hover:w-16'
+                  }`}></span>
                   {item.label}
                 </a>
               ))}
@@ -129,7 +179,7 @@ function Home() {
           </Section>
 
           <Section
-            id="experience"
+            id="experiences"
             title="Experiences"
             subtitle={{
               text: "View my full résumé",
@@ -167,7 +217,7 @@ function Home() {
           </Section>
 
           <Section
-            id="work"
+            id="projects"
             title="Projects"
             subtitle={{
               text: "View more on my GitHub",
