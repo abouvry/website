@@ -13,6 +13,7 @@
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.1.14",
+    "@types/gh-pages": "^6.1.0",
     "framer-motion": "^12.23.22",
     "lucide-react": "^0.545.0",
     "react": "^19.1.1",
