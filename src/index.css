@@ -11,3 +11,13 @@
   font-family: 'Inter', sans-serif;
 }
 
+/* Active navigation styles */
+.nav-item.active {
+  color: #64ffda;
+}
+
+.nav-item.active span {
+  width: 4rem !important; /* 16 * 4 = 64px which is equivalent to w-16 */
+  background-color: #64ffda;
+}
+
