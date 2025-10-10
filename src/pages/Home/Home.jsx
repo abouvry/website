@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
 import LiquidEther from "../../components/LiquidEther/LiquidEther";
@@ -10,21 +10,20 @@ function Home() {
   const navItems = Data.navItems;
   const experiences = Data.experiences;
   const projects = Data.projects;
-  const [activeSection, setActiveSection] = useState("");
   const socialLinks = Data.socialLinks.map((link) => {
     let icon;
     switch (link.icon) {
       case "Github":
-        icon = <Github size={20} />;
+        icon = <Github size={25} />;
         break;
       case "Linkedin":
-        icon = <Linkedin size={20} />;
+        icon = <Linkedin size={25} />;
         break;
       case "Mail":
-        icon = <Mail size={20} />;
+        icon = <Mail size={25} />;
         break;
       default:
-        icon = <FileText size={20} />;
+        icon = <FileText size={25} />;
     }
     return {
       icon: icon,
@@ -32,28 +31,42 @@ function Home() {
     };
   });
 
-  // Function to handle scroll and update active section
   useEffect(() => {
+    let ticking = false;
+    let lastScrollY = window.scrollY;
+    
     const handleScroll = () => {
-      const sections = navItems.map(item => document.getElementById(item.id));
-      const scrollPosition = window.scrollY + 100; // Add offset to account for header
+      const currentScrollY = window.scrollY;
+      if (Math.abs(currentScrollY - lastScrollY) > 10 || !ticking) {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const sections = navItems.map(item => document.getElementById(item.id));
+            const scrollPosition = currentScrollY + 100;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(section.id);
-          break;
+            for (let i = sections.length - 1; i >= 0; i--) {
+              const section = sections[i];
+              if (section && section.offsetTop <= scrollPosition) {
+                document.querySelectorAll('.nav-item').forEach(item => {
+                  item.classList.remove('active');
+                });
+                
+                const activeNavItem = document.querySelector(`[data-nav-item="${section.id}"]`);
+                if (activeNavItem) {
+                  activeNavItem.classList.add('active');
+                }
+                break;
+              }
+            }
+            ticking = false;
+            lastScrollY = currentScrollY;
+          });
+          ticking = true;
         }
       }
     };
 
-    // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
-    
-    // Initial call to set active section
     handleScroll();
-
-    // Cleanup event listener
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -63,13 +76,13 @@ function Home() {
     const element = document.getElementById(id);
     if (element) {
       window.scrollTo({
-        top: element.offsetTop - 80, // Adjust for any fixed header
+        top: element.offsetTop - 80,
         behavior: 'smooth'
       });
     }
   };
   return (
-    <div className="relative min-h-screen text-gray-200 bg-[#060010]">
+    <div className="relative min-h-screen text-gray-200 bg-[#020010]">
       <div
         style={{
           position: "fixed",
@@ -101,7 +114,7 @@ function Home() {
       {/* Sidebar */}
       <div className="relative z-20 flex flex-col md:flex-row min-h-screen pointer-events-auto">
         <aside className="lg:pl-30 md:fixed md:pt-25 pt-8 md:w-1/2 w-full md:h-screen flex flex-col p-6 items-center md:items-start text-center md:text-left">
-          <header className="ml-[50px]">
+          <header className="lg:ml-[50px]">
             <h1 className="text-6xl font-extrabold text-slate-200 mb-2 m-50px">
               Alexis Bouvry
             </h1>
@@ -112,22 +125,15 @@ function Home() {
               {navItems.map((item) => (
                 <a
                   key={item.id}
+                  data-nav-item={item.id}
                   href={`#${item.id}`}
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection(item.id);
                   }}
-                  className={`group flex items-center uppercase font-bold tracking-wide text-sm transition-colors ${
-                    activeSection === item.id
-                      ? 'text-[#64ffda]'
-                      : 'text-slate-200 hover:text-[#64ffda]'
-                  }`}
+                  className="nav-item group flex items-center uppercase font-bold tracking-wide text-sm transition-colors text-slate-200 hover:text-[#64ffda]"
                 >
-                  <span className={`inline-block mr-3 h-px transition-all duration-200 ease-in-out ${
-                    activeSection === item.id
-                      ? 'w-16 bg-[#64ffda]'
-                      : 'w-4 bg-[#64ffda] group-hover:w-16'
-                  }`}></span>
+                  <span className="inline-block mr-3 h-px w-4 bg-[#64ffda] transition-all duration-200 ease-in-out group-hover:w-16"></span>
                   {item.label}
                 </a>
               ))}
@@ -135,7 +141,7 @@ function Home() {
           </header>
 
           {/* Socials */}
-          <div className="md:flex flex gap-6 ml-[50px] md:mt-20 lg:mt-20">
+          <div className="md:flex flex gap-6 lg:ml-[50px] md:mt-20 lg:mt-20">
             {socialLinks.map((link, idx) => (
               <a
                 key={idx}
