@@ -1,16 +1,27 @@
-# React + Vite
+# Alexis Bouvry - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio website built with React, showcasing my projects, experiences, and skills as a Front End Developer. Features include animated backgrounds, responsive design, and smooth scrolling navigation.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive UI**: Liquid background effect using Three.js
+- **Responsive Design**: Works seamlessly on all device sizes
+- **Smooth Navigation**: Animated scrolling with active section tracking
+- **Modern Tech Stack**: Built with React, Vite, Tailwind CSS, and Framer Motion
+- **Project Showcase**: Interactive project cards with technology tags
 
-## React Compiler
+## 🛠️ Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19.1.1** - Component-based UI library
+- **Vite 7.1.7** - Fast build tool
+- **Tailwind CSS 4.1.14** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **Three.js** - 3D graphics library for background effects
+- **Lucide React** - Icon library
+- **ESLint** - Code linting
 
-## Expanding the ESLint configuration
+## Connect with Me
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [GitHub](https://github.com/abouvry)
+- [LinkedIn](https://linkedin.com/in/alexis-bouvry-967a0a6b)
+- Email: bouvryalexis@email.com
