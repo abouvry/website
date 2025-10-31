@@ -26,7 +26,7 @@
     },
     {
       "platform": "Email",
-      "url": "bouvryalexis@email.com",
+      "url": "mailto:bouvryalexis@email.com",
       "icon": "Mail"
     }
   ],
@@ -65,7 +65,7 @@
       "title": "alexisbouvry.com",
       "description": "Personal portfolio site built with React, Tailwind CSS, Vite and ThreeJS.",
       "link": "#",
-      "image": "/src/assets/portfolio-preview.png",
+      "image": "img/website.jpg",
       "tags": ["React", "TailwindCSS", "ThreeJS"]
     },
     {
