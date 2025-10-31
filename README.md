@@ -2,7 +2,7 @@
 
 Portfolio website built with React, showcasing my projects, experiences, and skills as a Front End Developer. Features include animated backgrounds, responsive design, and smooth scrolling navigation.
 
-## 🚀 Features
+## Features
 
 - **Interactive UI**: Liquid background effect using Three.js
 - **Responsive Design**: Works seamlessly on all device sizes
@@ -10,7 +10,7 @@ Portfolio website built with React, showcasing my projects, experiences, and ski
 - **Modern Tech Stack**: Built with React, Vite, Tailwind CSS, and Framer Motion
 - **Project Showcase**: Interactive project cards with technology tags
 
-## 🛠️ Technologies
+## Technologies
 
 - **React 19.1.1** - Component-based UI library
 - **Vite 7.1.7** - Fast build tool
